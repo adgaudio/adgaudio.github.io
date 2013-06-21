@@ -1,0 +1,131 @@
+/* Setup */
+
+html
+{
+margin: 0;
+padding: 0; 
+border: 0; 
+width:100%;
+font-size: inherit;
+font-family: Verdana, Arial, Sans Serif;
+vertical-align: baseline;
+text-align:center;
+background:#AABab9;
+color: #333333;
+}
+
+a {
+    color: #5084B4;
+}
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+}
+
+table {
+  border: 0px solid black;
+  border-collapse: collapse;
+}
+td, th {
+  text-align:center;
+  padding:5px;
+}
+
+.rounded-corners {
+     -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -khtml-border-radius: 18px;
+    border-radius: 18px;
+}
+
+/* Navigation Bar*/
+
+.nav-bar {
+    background: url('nav-bar.jpg') no-repeat 50% 0%;
+    margin-left:15%;
+    margin-right:15%;
+    padding-bottom: 0px;
+}
+.nav-bar h1 { 
+    background:none;
+    color: #333;
+    padding-top: 90px;
+    font-size: 3.4em;
+    margin-top: 0px;
+    text-align: inherit;
+    line-height: 50px;
+}
+
+.nav-bar ul {
+    margin-top: 10px;
+    background:none;
+    padding-bottom: 1em;
+}
+.nav-bar ul li{
+    background:none;
+    width: 100%;
+    text-align: inherit;
+   
+    display:inline;
+    white-space: nowrap;
+    margin-bottom: 0px;
+    padding-right:15px;
+}
+.nav-bar ul li a {
+    background:none;
+    color:#444;
+    font-size:1.4em;
+    line-height: 1.5em;
+}
+.nav-bar a:hover {
+    color: #f33;
+}
+#nav-bar-active {
+    color: black; /*#a11;*/
+    border-bottom: 3px solid #a11;
+}
+
+
+
+
+/* Content */
+
+.content {
+    margin-top: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+    width:80%;
+    float:left; 
+    text-align: justify;
+    background: #F5F5F5;
+}
+
+.left-column {
+    float:left; 
+    width: 71%;
+    padding-left:2%;
+    padding-right:3%;
+    //background: url('column.jpg') repeat-y right top;
+    text-align: inherit;
+}
+.right-column {
+    margin-top: 50px;
+    padding:2%;
+    float:right;
+    width:20%;
+    text-align: left;
+    /*border: 1px solid black*/
+}
+
+/* Footer */
+
+.footer {
+	margin-top: -100px; /* negative value of footer height */
+	padding-top: 5px;
+	height: 100px;
+	text-align: center;
+	clear:both;
+} 
+
+.icons *{
+    height:40px; 
+    width:40px"

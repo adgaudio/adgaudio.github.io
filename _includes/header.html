@@ -1,0 +1,12 @@
+<header>
+  <nav class="nav-bar">
+    <h1>Alex Gaudio</h1>
+    <ul>
+        <li><a id="{% if current_page '/about/' %}nav-bar-active{% endif %}" href="/about/">About</a></li>
+        <li><a id="{% if current_page '/projects/' %}nav-bar-active{% endif %}" href="/projects/">Projects</a></li>
+        <li><a id="{% if current_page '/blog/' %}nav-bar-active{% endif %}" href="/blog/">Blog</a></li>
+        <li><a id="{% if current_page '/resume/' %}nav-bar-active{% endif %}" href="/resume/">Resume</a></li>
+        <li><a id="{% if current_page '/contact/' %}nav-bar-active{% endif %}" href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,6 @@
+paginate: 1
+pygments: true
+relative_permalinks: false
+markdown: kramdown
+kramdown:
+  enable_coderay: true
