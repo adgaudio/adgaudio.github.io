@@ -27,17 +27,17 @@ Luckily, this isn't that complicated.  Basically, you need to convert \r to \n, 
 
 1.   Change the shell encoding to a format that can read carriage returns, and then find and replace carriage returns
 
-~~~ c
+{% highlight c %}
     $ LANG=en_US.ISO8859-1 tr '\r' '\n' &lt; INPUT.csv &gt; OUTPUT.csv
-~~~
+{% endhighlight %}
 
 2. dos2unix - a terminal program that comes with a whole set of tools to basically automate the above code
 
     Assuming you have dos2unix installed:
 
-~~~ c
+{% highlight c %}
     $ dos2unix INPUT.csv > OUTPUT.csv
-~~~
+{% endhighlight %}
 
 3. TextMate - If you prefer GUI, you can open the csv in TextMate and "Save As" csv with "LF" line endings
 

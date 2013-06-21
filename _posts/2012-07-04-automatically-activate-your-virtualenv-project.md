@@ -9,12 +9,12 @@ So have you heard about ruby's rvm?  Besides being a ruby version manager, it le
 
 If you don't have rvm already, [install it](https://rvm.io/rvm/install/) and learn ruby.  Then try this when you decide you like python better (hah!):
 
-~~~ c
+{% highlight c %}
     proj_name=PROJECT_NAME
     if [ "${VIRTUAL_ENV##*/}" != "$proj_name" ]
     then
       workon "$proj_name"
     fi
-~~~
+{% endhighlight %}
 
 

@@ -13,45 +13,45 @@ Lets look into this, shall we?
 
 1. Assuming you have numpy already and a mongo server, install Monary.  Dont use pip, because the module isn't even in the cheeseshop.
 
-~~~ text
+{% highlight c %}
         $ hg clone ssh://hg@bitbucket.org/djcbeach/monary ./monary
         $ cd ./monary && python setup.py install
-~~~
+{% endhighlight %}
 
 1. Make a db conneciton
 
-~~~ python
+{% highlight python %}
         $ python
         >>> from monary import Monary
         >>> mon = Monary() # connection to localhost
-~~~
+{% endhighlight %}
 
 1.  Make a query and receive numpy arrays
 
-~~~ python
+{% highlight python %}
         >>> columns = ['field1', 'field2', 'field3']
         >>> numpy_arrays = mon.query('mydb', 
                         'mycollection', 
                         {'field1':'query_stuff'},
                         columns, 
                         ['int32', 'date', 'string:20'])
-~~~
+{% endhighlight %}
 
 1. For ultimate happiness, pass this into a pandas DataFrame (assuming you've also installed pandas)
 
-~~~ python
+{% highlight python %}
         >>> import numpy
         >>> import pandas
         >>> df = numpy.matrix(arrs).transpose() 
         >>> df = pandas.DataFrame(df, columns=columns)
-~~~
+{% endhighlight %}
 
 I don't think I could safely do a benchmark comparison to pymongo and not feel stupid about it, but if you were interested in seeing where this process spends most time, check this out:
 
 I put the above code into a function called get_tu which populates 5 columns each with 1,200,000 rows of data (non NAN), and most of the ~2 seconds it took was waiting on mongo. (FYI - I'm using mongo 2.1.3-pre, returns data for this query ~.5 seconds faster than the current stable version of mongo)
 
 
-~~~ python
+{% highlight python %}
         In [53]: %prun -s cumulative main.get_tu()
 
 
@@ -70,4 +70,4 @@ I put the above code into a function called get_tu which populates 5 columns eac
         1    0.000    0.000    0.004    0.004 frame.py:323(__init__)
         5    0.000    0.000    0.004    0.001 numeric.py:1791(ones)
         5    0.004    0.001    0.004    0.001 {method 'fill' of 'numpy.ndarray' objects}
-~~~
+{% endhighlight %}

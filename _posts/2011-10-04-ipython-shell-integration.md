@@ -15,13 +15,13 @@ This post shows you how to take IPython's sweet bash/shell integration to anothe
 
 1. Import everything within your path that is executable as an IPython alias.  This means you can use bash commands like 'git status' or 'tail -f somefilename | grep something' without explicitly using the '!' to define a bash command. 
 
-~~~ python
+{% highlight python %}
         In [1]: %rehashx # rehashx is a magic function
-~~~
+{% endhighlight %}
 
 2. Define an IPython alias within the IPython Interpreter.
 
-~~~ python
+{% highlight python %}
         In [2]: touch myfile
     
         In [3]: a = get_ipython()
@@ -30,20 +30,20 @@ This post shows you how to take IPython's sweet bash/shell integration to anothe
     
         In [5]: foo myfile
         myfile
-~~~
+{% endhighlight %}
 
 3. Profile Customization: Automatically port bash aliases and run the magic, %rehashx, on startup. 
     
     Add the following code to your config file
 
-~~~ python
+{% highlight python %}
         # your config file is probably here
         $ ls ~/.config/ipython/profile_default/ipython_config.py)
-~~~
+{% endhighlight %}
 
     Note: you can also just run this interactively in the IPython interpreter.
 
-~~~ python
+{% highlight python %}
         # Add all of the following code to your ipython config file
 
         c = get_config()
@@ -54,11 +54,11 @@ This post shows you how to take IPython's sweet bash/shell integration to anothe
         a = a.replace('=',' ').replace('"','''"').replace("'",''"'").split('alias ')
         a =  [tuple(x.strip().split(' ', 1)) for x in a]
         c.AliasManager.user_aliases = [x for x in a if len(x) == 2]
-~~~
+{% endhighlight %}
 
 4. Use IPython as a system shell, and integrate bash code with python code!
 
-~~~ python
+{% highlight python %}
         In [6]: !echo 'some data\n0 1 2 3\n4 5 6\n7 8 9' > myfile
 
         In [7]: !!tail myfile
@@ -76,11 +76,11 @@ This post shows you how to take IPython's sweet bash/shell integration to anothe
 
         In [12]: !echo 'hello ${b + c}' # embed python code into the bash code
         hello from ipython and me
-~~~
+{% endhighlight %}
 
     Using SList, you can do all sorts of transformations on output from bash commands.
 
-~~~ python
+{% highlight python %}
         In [14]: touch myfile # if you get a SyntaxError, perhaps you didn't use %rehashx?
         In [15]: mkdir mydir
 
@@ -103,7 +103,7 @@ This post shows you how to take IPython's sweet bash/shell integration to anothe
         # return list of filepaths for all directories returned by ls -l
         In [21]: a.grep(r'^d').fields(-1).p 
         Out[21]: [path(u'mydir')]
-~~~
+{% endhighlight %}
 
 5. A whole new replacement for python (and bash) scripting!  Supports pure python + IPython + bash (as it works in IPython)
 
@@ -113,30 +113,30 @@ This post shows you how to take IPython's sweet bash/shell integration to anothe
 
     Execute script
 
-~~~ c
+{% highlight c %}
          $ chmod +x ipyscript.py
          $ ./ipyscript example.ipy
-~~~
+{% endhighlight %}
 
     * Note: There is also a method in IPython core that (I believe) attempts to achieve a similar effect:
 
-~~~ python
+{% highlight python %}
             In [1]: IPython.core.interactiveshell.InteractiveShell.safe_execfile_ipy??
         
             # This can be accessed like this:
             In [2]: c = get_ipython()
     
             In [3]: c.safe_execfile_ipy('./example.ipy')
-~~~
+{% endhighlight %}
         
 Unfortunately, it doesn't work very well
 
 ##### For more tips
 Checkout the notes for my talk on tmux and ipython:
 
-~~~ python
+{% highlight python %}
         git clone https://github.com/adgaudio/Tmux-IPython-Talk.git
-~~~
+{% endhighlight %}
 
 Or the video of my talk: <a href="http://blip.tv/pygotham/tmux-ipython-awesome-5586324">HERE (python in the second half)</a>
 

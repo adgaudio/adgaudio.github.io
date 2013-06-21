@@ -23,9 +23,11 @@ $$
 
 Let's break down what this means.  Taking a permutation is like grouping the elements in different orderings.  So, an array like, $[a,b,c,d]$, would have these 3-element pairs (I chose 3 because it's larger than 2).  Notice that if we only looked at the first 2 elements, we see that each pair occurs multiple times.  In other words, if we group the (k+i)-element permutations into k-element permutations, we have lots of duplicates!
 
+
 {::nomarkdown}
-  <table border=0>
-    <tr><td style="padding:1em;">
+<table border="0px">
+  <tr>
+    <td style="padding:1em;">
       $$
        \begin{array}{}\\\
       abc & abd \\\
@@ -37,16 +39,19 @@ Let's break down what this means.  Taking a permutation is like grouping the ele
       \ldots \\\
       \end{array}
       $$
-    </td><td style="padding:1em;">
+    </td>
+    <td style="padding:1em;">
       $\overrightarrow{}$
-    </td><td style="padding:1em;">
+    </td>
+    <td style="padding:1em;">
       $ \begin{array}{}\\\
       ab \\\ ac \\\ ad \\\
       ba \\\ bc \\\ bd \\\
       \ldots \\\
       \end{array}$
-  </td></tr>
-  </table>
+    </td>
+  </tr>
+</table>
 {:/}
 
 
@@ -87,7 +92,7 @@ At the beginning of this post, I identified the N choose k problem as a reason w
 
 
 {::nomarkdown}
-<table border=1px>
+<table border="1px">
   <tr>
     <th>N</th>
     <th>Num combinations</th>
