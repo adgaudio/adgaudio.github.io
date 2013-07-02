@@ -1,0 +1,32 @@
+C-x b --- switch buffer
+C-x <NUMBER> --- splits buffer horizontally or vertically
+C-x o --- switch between frames (ie if you have a split window)
+M-x split-window-(horizontally|vertically) --- 
+
+C-a  or  C-e --- Home and End keys, respectively
+C-v  or  C- --- Page DOWN and Page UP keys, respectively
+M-> or M-< --- End of page or Start of page (ie page is a buffer), respectively
+C-n  or  C-p --- next line down or up, respectively
+
+C-s --- Search for PATTERN
+C-_ or C-- --- UNDO or REDO, respectively
+
+
+
+C-x C-e --- execute lisp code on the current line?
+
+
+C-w --- cut
+C-y --- paste (M-y is paste previous)
+OR
+type
+(cua-mode t)  and then C-x C-e  --- sets the cut copy and back buttons to be normal
+
+
+
+M-x regex-builder --- opens a small buffer that lets you run regular
+			 expressions on an open buffer
+
+M-x rgrep --- searches files for selected text in emacs
+M-x align-regexp <pattern> --- aligns text into 2 columns based on pattern
+M-x occur <pattern> --- lets you find all occurrences of <pattern> in file
