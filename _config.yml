@@ -2,3 +2,5 @@ paginate: 1
 pygments: true
 relative_permalinks: false
 markdown: kramdown
+gems:
+  - jekyll-redirect-from
