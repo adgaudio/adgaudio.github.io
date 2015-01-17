@@ -1,6 +1,10 @@
 paginate: 1
-pygments: true
 relative_permalinks: false
-markdown: kramdown
+syntax-highlighting:
+  css: css/code.css
+pygments: true
+markdown: redcarpet
+redcarpet:
+    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 gems:
   - jekyll-redirect-from

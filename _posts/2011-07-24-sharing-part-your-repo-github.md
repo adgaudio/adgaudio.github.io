@@ -26,44 +26,41 @@ public repo.  **End of update**
 Assume that we have a private repo where we do all our work.  The
 repo contains public, private, and mixed directories. Something like:
 
-{% highlight c %}
+```bash
+git init private_repo
 
-    git init private_repo
-    
-    cd private_repo
-    mkdir private public mixed
-    touch private/secret_pw private/proprietary private/personal 
-    touch public/cool_project public/useful_code public/docs 
-    touch mixed/a_private_file mixed/a_public_file
-    
-    git add private public mixed
-    git commit -am "initial commit to master"
-    git push origin master
-{% endhighlight %}
+cd private_repo
+mkdir private public mixed
+touch private/secret_pw private/proprietary private/personal 
+touch public/cool_project public/useful_code public/docs 
+touch mixed/a_private_file mixed/a_public_file
+
+git add private public mixed
+git commit -am "initial commit to master"
+```
 
 Now we have a repo in our working environment and we can consider what code we
 will want to display on GitHub.  Specifically, we want to share our 'public'
 directory and a file in the 'mixed' directory on GitHub and hide the private
 files.  In this step, we create an orphaned branch containing only the files we
-want to share on GitHub.    
-    
-{% highlight c %}
+want to share on GitHub.
 
-    # Create a branch that will contain only our public files
-    git checkout --orphan github 
-    #     read docs (git help checkout) for the specifics about '--orphan'.  
-    #     It resets your development history.
-    
-    # Choose either option 1 or 2 (whatever's easiest)
-    # OPTION 1: Starting with an empty slate
-    git rm -rf ./*  # only necessary the first time
-    git checkout master public mixed/a_public_file
-    # OPTION 2: Filtering out private files
-    git rm -rf private mixed/a_private_file
-    
-    git status
-    git commit -am "files for public viewing on github"
-{% endhighlight %}
+```bash
+# Create a branch that will contain only our public files
+git checkout --orphan github 
+#     read docs (git help checkout) for the specifics about '--orphan'.  
+#     It resets your development history.
+
+# Choose either option 1 or 2 (whatever's easiest)
+# OPTION 1: Starting with an empty slate
+git rm -rf ./*  # only necessary the first time
+git checkout master public mixed/a_public_file
+# OPTION 2: Filtering out private files
+git rm -rf private mixed/a_private_file
+
+git status
+git commit -am "files for public viewing on github"
+```
 
 At this point, we have a master branch and a github branch that exist in the
 private repo.  The github branch contains a subset of files found in the
@@ -71,56 +68,52 @@ master.  Next, we create a GitHub repository on the GitHub website (Dashboard
 --> New Repository --> Fill out form), and then we register this repo as a
 remote in our private repo.
 
-{% highlight c %}
-
-    # 1. Create a public repository on GitHub (go to their website)
-    # 2. add a remote:
-    git remote add public_repo git@github.com:adgaudio/myRepoOnGitHub.git
-{% endhighlight %}
+```bash
+# 1. Create a public repository on GitHub (go to their website)
+# 2. add a remote:
+git remote add public_repo git@github.com:adgaudio/myRepoOnGitHub.git
+```
 
 If, at this point, you don't want to create a git repo but would prefer to test
 locally, you can try this instead:
 
-{% highlight c%}
-
-    # 1. Emulate creating a public repo on GitHub:
-    cd ..
-    git init --bare fake_public_repo
-    # 2. add a remote:
-    cd private
-    git remote add public_repo ../fake_public_repo
-{% endhighlight %}
+```bash
+# 1. Emulate creating a public repo on GitHub:
+cd ..
+git init --bare fake_public_repo
+# 2. add a remote:
+cd private_repo
+git remote add public_repo ../fake_public_repo
+```
 
 Ordinariliy, to push our branch to GitHub, all we'd need to do is this:
 
-{% highlight c %}
-
-    # don't do this yet
-    cd ../private
-    git push public_repo github:master  # ie. push github to public_repo/master
-{% endhighlight %}
+```bash
+# don't do this yet
+cd ../private_repo
+git push public_repo github:master  # ie. push github to public_repo/master
+```
 
 And we're done!  However, being lazy (I mean efficient!) programmers, perhaps
 we'd like to automate pushing the github branch to GitHub whenever we make a
 commit.  The trick here is to use a hook that gets called after every commit.
 
 
-{% highlight c %}
+```bash
+cd ../private_repo/.git/hooks
+emacs post-commit
 
-    cd ../private/.git/hooks
-    emacs post-commit
-    
-    #Add this data to the file:
-        #!/bin/bash
-        LOG="/tmp/github.log"
-        echo "`date`" >> $LOG
+#Add this data to the file:
+    #!/bin/bash
+    LOG="/tmp/github.log"
+    echo "`date`" >> $LOG
 
-        #Push changes to GitHub
-         #note - GitHub needs to know your public key
-        (git push public_repo github:master 2>&1) >> $LOG 
+    #Push changes to GitHub
+     #note - GitHub needs to know your public key
+    (git push public_repo github:master 2>&1) >> $LOG 
 
-    chmod +x ./post-commit
-{% endhighlight %}
+chmod +x ./post-commit
+```
 
 What this means is that whenever we make a commit to the github branch, its
 contents automatically get pushed to GitHub!
@@ -131,36 +124,34 @@ create an ssh key specifically for your GitHub account.
 
 Here's what I'd suggest you do:
 
-{% highlight c %}
+```bash
+# 1: Create a key specifically for github:
+ssh-keygen -f ~/.ssh/id_rsa_github  # Be Careful not to overwrite an existing private key!
 
-    # 1: Create a key specifically for github:
-    ssh-keygen -f ~/.ssh/id_rsa_github  # Be Careful not to overwrite an existing private key!
+# 2: Configure ssh access to github.com to always use your new key
+emacs ~/.ssh/config
+#Add this to the file
+    Host github.com
+    User git
+    Port 22
+    Hostname github.com
+    IdentityFile ~/.ssh/id_rsa_github
+    TCPKeepAlive yes
+    IdentitiesOnly yes
 
-    # 2: Configure ssh access to github.com to always use your new key
-    emacs ~/.ssh/config
-    #Add this to the file
-        Host github.com
-        User git
-        Port 22
-        Hostname github.com
-        IdentityFile ~/.ssh/id_rsa_github
-        TCPKeepAlive yes
-        IdentitiesOnly yes
+# 3: Navigate your browser to your GitHub profile settings page and
+register the # public key you just created (`id_rsa_github.pub`) as an
+authorized key.
 
-    # 3: Navigate your browser to your GitHub profile settings page and
-    register the # public key you just created (`id_rsa_github.pub`) as an
-    authorized key.
-
-    # 4: Add your existing key to your keyring
-    # (you may need to do this after every reboot before using the key)
-    ssh-add ~/.ssh/id_rsa_github
-{% endhighlight %}
+# 4: Add your existing key to your keyring
+# (you may need to do this after every reboot before using the key)
+ssh-add ~/.ssh/id_rsa_github
+```
 
 Finally, test your setup by pushing your code
 
-{% highlight c %}
-
-    cd ../private_repo
-    git push origin github
-{% endhighlight %}
+```bash
+cd ../private_repo
+git push origin github
+```
 

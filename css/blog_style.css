@@ -29,3 +29,14 @@
 .post-header h1 a {
 color:#333333}
 
+/* Code blocks */
+pre {
+  background-color: #D6D6DB;
+  /*background-color: #CACAD4;*/
+  padding: 15px;
+  /* rounded corners */
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+}
