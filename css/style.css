@@ -40,12 +40,12 @@ td, th {
 /* Navigation Bar*/
 
 .nav-bar {
-    background: url('nav-bar.jpg') no-repeat 50% 0%;
+    background: url('/img/nav-bar.jpg') no-repeat 50% 0%;
     margin-left:15%;
     margin-right:15%;
     padding-bottom: 0px;
 }
-.nav-bar h1 { 
+.nav-bar h1 {
     background:none;
     color: #333;
     padding-top: 90px;
@@ -64,7 +64,7 @@ td, th {
     background:none;
     width: 100%;
     text-align: inherit;
-   
+
     display:inline;
     white-space: nowrap;
     margin-bottom: 0px;
@@ -96,7 +96,8 @@ td, th {
     width:80%;
     float:left; 
     text-align: justify;
-    background: #F5F5F5;
+    /* background: #F5F5F5; */
+    background: #fafafa;
 }
 
 .left-column {
