@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: A foray into bike lights, from front to back.
@@ -30,13 +29,19 @@ software and hardware can enjoy these posts.
 Here is a "table of contents" for the upcoming series.  I will write
 these posts out of order and link to them here:
 
-1. The series begins by introducing the components of a typical bike
-   light and lightly reviewing how these components work.  Think of it
-as a survey of relevant hardware components.
+1. [Surveying bike light components](/2016/07/09/surveying-bike-light-components):
+
+    > The series begins by introducing the components of a typical bike
+light and reviewing how these components work and what challenges they
+introduce.  Think of it as a survey of relevant hardware components.
 
 1. A deeper dive into the process of creating a constant current circuit
    to drive the LED.  We will lightly review how the circuit works and
 use a few important equations for choosing components of the circuit.
+
+1. AVR programming an ATTiny85 microcontroller without Arduino
+
+1. PWM and debouncing on an AVR microcontroller
 
 1. Presenting my first 2 simple white bike light builds and why the
    first one burned out.

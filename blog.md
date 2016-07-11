@@ -2,7 +2,6 @@
 layout: default
 title: About
 permalink: /blog/
-redirect_from: "/"
 ---
 
 {% for post in site.posts %}

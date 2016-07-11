@@ -2,43 +2,120 @@
 layout: default
 title: Projects
 permalink: /projects/
+redirect_from: "/"
 ---
 
-<h3>Laser Scanning Galvanometers</h3>
-<p>
-I'm doing this mainly because lasers are fun!  There are a lot of really interesting projects online where people have glued mirrors to speakers or transducers.  I'll probably use the cheap piezoelectric transducers you can pull out of old humidifiers.
-</p>
-</h3>
+### Bike Lights: Building, Researching, Learning
 
-<h3>DLP Printer</h3>
-<p>
-In an attempt to solve some existing problems with diy DLP printer designs, I designed and built this printer from scratch.  Basically, the printer makes objects by hardening a liquid plastic solution only in places where (laser) light shines with enough intensity.  I'm currently writing firmware and software for it.  I really want to build clear, micro-scale objects that can perform sophisticated operations (like moving water through a particular lattice structure).  The liquid plastic side of things also seems like a great medium to embed different compounds.
-</p>
-</h3>
+Biking in NYC is terrifying and absolutely awesome.  But one fear of mine is
+hard to overcome: getting hit from behind due to a need to break quickly on a
+crowded bike path or the street.  I became inspired to solve this problem and
+decided to build an intelligent brake light that turns brighter red when
+braking by using accelerometer readings.  It turns out that building a reliable
+and portable light like this is quite challenging, and neat problems abound!
+
+I am exposing this project in a series of blog posts as I explore and learn
+about the topic.  So far, I've done some cool things!  I have a couple
+prototypes, I've learned to program an AVR ATTiny85, I built a few constant
+current circuits from scratch, and I created some probabilistic algorithms
+to detect braking from accelerometer data.
+
+I have decided to document my journey through this process.  Please check my:
+
+* Series of [blog posts documenting this project](/2016/07/08/foray-into-bike-lights-from-front-to-back)
+* Github code:
+  *  3d printer designs
+      *  [1st prototype](https://github.com/adgaudio/3dPrinter/blob/master/random_parts/bike_light.scad)
+      *  [2nd prototype](https://github.com/adgaudio/3dPrinter/blob/master/random_parts/bike_light_from_gu10_bulb.scad)
+      *  [battery pack (nothing specific at this link)](https://github.com/adgaudio/3dPrinter/blob/master/random_parts/)
+      *  check the repository from those links for other designs
+  * [programming the ATTiny85 microcontroller](https://github.com/adgaudio/attiny85_blink_LED)
+  * [algorithm for the smart brake light (in python)](https://github.com/adgaudio/smart_brake_light)
+
+
+Please check the [blog post series](/2016/07/08/foray-into-bike-lights-from-front-to-back) for progress!
+
+### Stolos, Relay and Relay.Mesos
+
+This represents 3 projects I undertook while a data scientist at Sailthru.
+These projects solve distributed systems problems for the data science team.
+
+Check the following GitHub pages:
+
+  * [Stolos: A Directed Acyclic Graph task dependency scheduler designed to
+  simplify complex distributed pipelines](https://github.com/sailthru/stolos)
+  * [Relay: A self-tuning thermostat for distributed systems that minimizes the
+  error between some metric and a target](https://github.com/sailthru/relay)
+  * [Relay.Mesos: A mesos plugin for Relay that lets you auto-scale the number
+  of currently running instances of a bash
+  command](https://github.com/sailthru/relay.mesos)
+
+{% comment %} <h3>Laser Scanning Galvanometers</h3> {% endcomment %}
+{% comment %} <p> {% endcomment %}
+{% comment %} I'm doing this mainly because lasers are fun!  There are a lot of really interesting projects online where people have glued mirrors to speakers or transducers.  I'll probably use the cheap piezoelectric transducers you can pull out of old humidifiers. {% endcomment %}
+{% comment %} </p> {% endcomment %}
+{% comment %} </h3> {% endcomment %}
+
+### DLP Printer
+
+In an attempt to solve some existing problems with diy DLP printer designs, I
+designed and built this printer from scratch.  Basically, the printer makes
+objects by hardening a liquid plastic solution only in places where (laser)
+light shines with enough intensity.  I'm currently writing firmware and
+software for it.  I really want to build clear, micro-scale objects that can
+perform sophisticated operations (like moving water through a particular
+lattice structure).  The liquid plastic side of things also seems like a great
+medium to embed different compounds.
+
+* [GitHub repository for its development](https://github.com/adgaudio/dlp_printer)
+
 
 <h3>I proposed underwater!</h3>
 <p>
 While scuba diving at night, on a surprise vacation in Bonaire with a 3D printed florescent ring, an invisible ink message, 3D printed blue and white dive lights, and a blacklight in a peanut butter jar filled with mineral oil!  And my fiance, Emma, is amazing.
 </p>
-</h3>
 
-<h3>A Self-Sourced MendelMax RepRap 3D printer</h3>
-<p>
-Two months, an apartment littered with hardware, curious blobs of plastic, and several all night-ers later, I have finally finished building my first 3D printer!  But my little printing revolution is nothing compared to the 3D printing movement that will revolutionize the manufacturing industry, so hang on to your seats!
-</p>
-</h3>
+### A Self-Sourced MendelMax RepRap 3D printer
+
+Two months, an apartment littered with hardware, curious blobs of plastic, and
+several all night-ers later, I have finally finished building my first 3D
+printer!  But my little printing revolution is nothing compared to the 3D
+printing movement that will revolutionize the manufacturing industry, so hang
+on to your seats!
+
+For me, this project was an amazing first step into mechanical design and
+electronics.  I sourced all the parts and tools from McMaster and elsewhere to
+build the printer by hand.  In my NYC studio apartment, I quickly amassed a
+collection of things and created a "workshop" beside to my bed.  The joys of
+New York are that everything is close together. :)  I learned that mechanical
+motion is hard, and careful calibration takes a lot of effort.  Lacking
+instructions for many components, such as electronics and y axis, I made stuff
+up to fill the gaps.
+
+I will never forget the sheer excitement and feeling of "oh my God, I really
+can do this!" when the motors on the machine moved for the first time.  I
+treasure my first blob of plastic that should have been a cube; the object is
+very symbolic for me.  The project helped me realize that problems that appear
+vastly complicated and confusing are sometimes secretly just within reach.  The
+problem of building a complex electromechanical device to create 3D objects in
+this case did not require years of effort and discovery on my part, but was
+simply a matter of finding which paths have already been well developed by
+others.  I am grateful to those that made this experience possible for me.
+
+Check my GitHub repository for the things I've built with this printer.
+
+* [3D printed designs](https://github.com/adgaudio/3dPrinter)
+* [Tooling for OpenSCAD](https://github.com/adgaudio/OpenSCAD-Tools)
 
 <h3>Artificially Intelligent Yogurt Maker</h3>
 <p>
 A what?!  Well, I could have called it pid-controlled thermostat, or maybe just "milk heater," but those names just fall short.  Few people realize that a PID controller utilizes a predictive algorithm that must be "trained," or "tuned," to the proper parameters.  And yes, my yogurt is tastier than Fage...maybe not than Brown Cow, though!
 </p>
-</h3>
 
 <h3>Kaggle Wordpress Data Science Competition</h3>
 <p>
 Excitement is mounting amidst the start of my second kaggle competition!  This time around, I'm using my machine learning and data science skills to recommend the top Wordpress posts a user is most likely to "like."  There's a lot that goes into a recommendation system like this one - blended models, probability density estimation, collaborative filtering, feature extraction...  I better not say too much!  Checkout the tip of the iceberg on <a href="http://www.github.com/adgaudio/kaggle-wordpress" target="_blank">github</a>!
 </p>
-</h3>
 
 <h3>Kaggle Competition - <a href="http://datascienceglobal.org" target="_blank">Data Science Global</a> (Air Quality Prediction)</h3>
 <p>
