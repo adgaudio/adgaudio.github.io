@@ -7,20 +7,20 @@ redirect_from: "/"
 
 ### Bike Lights: Building, Researching, Learning
 
-Biking in NYC is terrifying and absolutely awesome.  But one fear of mine is
-hard to overcome: getting hit from behind due to a need to break quickly on a
-crowded bike path or the street.  I became inspired to solve this problem and
-decided to build an intelligent brake light that turns brighter red when
-braking by using accelerometer readings.  It turns out that building a reliable
-and portable light like this is quite challenging, and neat problems abound!
+Biking in NYC is both terrifying and absolutely awesome.  One fear of mine is
+hard to overcome: getting hit from behind when braking quickly on a crowded
+bike path or the street.  I became inspired to solve this problem and decided
+to build an intelligent tail light that analyzes accelerometer readings to
+shine brighter red when braking.  It turns out that a reliable and portable
+light like this is quite challenging to implement.  Neat problems abound!
 
-I am exposing this project in a series of blog posts as I explore and learn
-about the topic.  So far, I've done some cool things!  I have a couple
-prototypes, I've learned to program an AVR ATTiny85, I built a few constant
-current circuits from scratch, and I created some probabilistic algorithms
-to detect braking from accelerometer data.
+I am exposing my research and efforts on this project in a series of blog posts
+on the topic of bike lights.  So far, I've done some cool things!  I have a
+couple prototypes, I've learned to program an AVR ATTiny85, I built a few
+constant current circuits from scratch, and I created some probabilistic
+algorithms to detect braking from accelerometer data.
 
-I have decided to document my journey through this process.  Please check my:
+The following links document my journey through this process.  Please check my:
 
 * Series of [blog posts documenting this project](/2016/07/08/foray-into-bike-lights-from-front-to-back)
 * Github code:
@@ -50,12 +50,6 @@ Check the following GitHub pages:
   of currently running instances of a bash
   command](https://github.com/sailthru/relay.mesos)
 
-{% comment %} <h3>Laser Scanning Galvanometers</h3> {% endcomment %}
-{% comment %} <p> {% endcomment %}
-{% comment %} I'm doing this mainly because lasers are fun!  There are a lot of really interesting projects online where people have glued mirrors to speakers or transducers.  I'll probably use the cheap piezoelectric transducers you can pull out of old humidifiers. {% endcomment %}
-{% comment %} </p> {% endcomment %}
-{% comment %} </h3> {% endcomment %}
-
 ### DLP Printer
 
 In an attempt to solve some existing problems with diy DLP printer designs, I
@@ -68,6 +62,11 @@ lattice structure).  The liquid plastic side of things also seems like a great
 medium to embed different compounds.
 
 * [GitHub repository for its development](https://github.com/adgaudio/dlp_printer)
+
+Update: UV lasers are dangerous.  They can blind you faster than you can blink.
+The reflected beam is also dangerous.  I temporarily paused further work on
+this after I had created some unexpected burn marks in my furniture.  Maybe
+I'll resume with a DLP projector next go around...
 
 
 <h3>I proposed underwater!</h3>
