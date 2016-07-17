@@ -32,12 +32,15 @@ these posts out of order and link to them here:
 1. [Surveying bike light components](/2016/07/09/surveying-bike-light-components):
 
     > The series begins by introducing the components of a typical bike
-light and reviewing how these components work and what challenges they
-introduce.  Think of it as a survey of relevant hardware components.
+    light and reviewing how these components work and what challenges they
+    introduce.  Think of it as a survey of relevant hardware components.
 
-1. A deeper dive into the process of creating a constant current circuit
-   to drive the LED.  We will lightly review how the circuit works and
-use a few important equations for choosing components of the circuit.
+1. [Design and Circuitry of a Smart Brake Light](/2016/07/15/design-and-circuitry-smart-bike-light):
+
+    > A deeper dive into the process of creating a constant current circuit
+   to drive the LED.  We will lightly review how the circuit works and use a
+   few important equations to understand how to choose the components of the
+   circuit.
 
 1. AVR programming an ATTiny85 microcontroller without Arduino
 
@@ -45,8 +48,6 @@ use a few important equations for choosing components of the circuit.
 
 1. Presenting my first 2 simple white bike light builds and why the
    first one burned out.
-
-1. Circuit design and concept for a "smart" brake light.
 
 1. An algorithm for a "smart" brake light using rolling averages, the Z score,
    and the binomial probability mass function.
