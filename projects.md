@@ -123,7 +123,7 @@ Sweating through the night really paid off when David, Asher and I won <a href="
 
 <h3>Stanford Machine Learning Class with Andrew Ng</h3>
 <p>
-Well, this was pretty darn fun, I have to admit.  Coming away from this class with a <a href="/media/ml_class_statement_of_accomplishment.pdf" target="_blank">perfect score</a> in the class and two notebooks full of valuable information.  I can't tell you the number of times I've checked back to my notes in the past several months!
+Well, this was pretty darn fun, I have to admit.  Coming away from this class with a <a href="/img/ml_statement_of_accomplishment.pdf" target="_blank">perfect score</a> in the class and two notebooks full of valuable information.  I can't tell you the number of times I've checked back to my notes in the past several months!
 </p>
 
 <h3>PyGotham</h3>
