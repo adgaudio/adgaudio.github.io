@@ -1,2 +1,10 @@
-_site/
-Gemfile.lock
+cv/CV.aux
+cv/CV.bbl
+cv/CV.bcf
+cv/CV.blg
+cv/CV.fdb_latexmk
+cv/CV.fls
+cv/CV.log
+cv/CV.out
+cv/CV.run.xml
+cv/CV.synctex.gz
