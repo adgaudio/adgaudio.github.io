@@ -96,8 +96,8 @@ td, th {
     width:80%;
     float:left; 
     text-align: justify;
-    /* background: #F5F5F5; */
-    background: #fafafa;
+    background: #F5F5F5;
+    /* background: #fafafa; */
 }
 
 .left-column {
