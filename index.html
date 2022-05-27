@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -121,13 +123,15 @@
             <section id="publications" class="mt-5">
 
               <div class="bibtex_template" style="display: none;">
-                <div class="if author" style="font-weight: bold;">
+                <div style="font-weight: bold;">
                   <span class="if year"> <span class="year"></span>, </span>
-                  <span class="author"><span class="first"></span><span class="von" bibtex-js-rif=""> </span><span class="last" bibtex-js-rif=""> </span><span class="junior">, </span></span>
+                  <span class="if author"> <span class="author"><span class="first"></span><span class="von" bibtex-js-rif=""> </span><span class="last" bibtex-js-rif=""> </span><span class="junior">, </span></span> </span>
                   <span class="if url" style="margin-left: 20px"> <a class="url" style="color:black; font-size:10px">(publisher)</a> </span>
                   <span class="if arxiv" style="margin-left: 20px"> <a class="arxiv" style="color:black; font-size:10px">(arxiv)</a> </span>
                   <span class="if sourcecode" style="margin-left: 20px"> <a class="sourcecode" style="color:black; font-size:10px">(code)</a> </span>
                   <span class="if patenturl" style="margin-left: 20px"> <a class="patenturl" style="color:black; font-size:10px">(see patent)</a> </span>
+                  <span class="if semester">
+                      <span class="semester"></span></span>, <span class="coursename"></span>, <span class="role"></span>
                 </div>
                 <div style="margin-left: 10px; margin-bottom:5px;">
                   <div><span class="title"></span></div>
@@ -135,6 +139,11 @@
                     <span class="if journal"><span class="journal" style="font-style: italic;"></span></span>
                     <span class="if organization"><span class="organization" style="font-style: italic;"></span></span>
                     <span class="if booktitle"><span class="booktitle" style="font-style: italic;"></span></span>
+                <span class="if detail1"></span><span class="detail1"></span>
+                <span class="if detail2"></span><span class="detail2"></span>
+                <span class="if slides1" style="margin-left: 20px"> <a class="arxiv" style="color:black; font-size:10px">(slides1)</a> </span>
+                <span class="if slides2" style="margin-left: 20px"> <a class="slides2" style="color:black; font-size:10px">(slides2)</a> </span>
+                <span class="if slides3" style="margin-left: 20px"> <a class="slides3" style="color:black; font-size:10px">(slides 3)</a> </span>
                   </div>
                 </div>
               </div>
@@ -151,27 +160,7 @@
             </section>
 
             <section id="teaching" class="mt-5">
-              <div class="bibtex_template" style="display: none;">
-                <div class="if semester" style="font-weight: bold;">
-                  <span class="semester"></span>
-                  ,
-                  <span class="coursename"></span>
-                  ,
-                  <span class="role"></span>
-                </div>
-                <div style="margin-left: 10px; margin-bottom:5px;">
-                    <div>
-                <span class="detail1"></span>
-                    </div>
-                <span class="detail2"></span>
-                <span class="if slides1" style="margin-left: 20px"> <a class="arxiv" style="color:black; font-size:10px">(slides1)</a> </span>
-                <span class="if slides2" style="margin-left: 20px"> <a class="slides2" style="color:black; font-size:10px">(slides2)</a> </span>
-                <span class="if slides3" style="margin-left: 20px"> <a class="slides3" style="color:black; font-size:10px">(slides 3)</a> </span>
-                </div>
-              </div>
-
               <h3>Teaching</h3>
-
               <div class="bibtex_display" keywords="teaching" > </div>
             </section>
 
@@ -208,3 +197,4 @@
         
       
 </body>
+</html>
