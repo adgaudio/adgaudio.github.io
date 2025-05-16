@@ -151,7 +151,7 @@
                 <div style="margin-left: 10px; margin-bottom:5px;">
                   <div><span class="title"></span></div>
                   <div>
-                    <span class="if journal"><span class="journal" style="font-style: italic;"></span></span>
+                    <span class="if journal"><span class="journal sort date" style="font-style: italic;"></span></span>
                     <span class="if organization"><span class="organization" style="font-style: italic;"></span></span>
                     <span class="if booktitle"><span class="booktitle" style="font-style: italic;"></span></span>
                     <span class="if detail1"></span><span class="detail1"></span>
@@ -162,23 +162,57 @@
                   </div>
                 </div>
               </div>
-            <section id="publications" class="mt-5">
+<section id="publications" class="bibtex_structure mt-5">
+  <h3>Current Publications</h3>
+  <div class="sections bibtextypekey">
+    <div class="section article">
+      <h4 class="py-3">Journal, peer reviewed</h4>
+      <div class="sort year" extra="DESC number">
+        <div class="templates"></div>
+      </div>
+    </div>
+    <!-- <div class="section book"> -->
+    <!--   <h4>Books</h4> -->
+    <!--   <div class="sort year" extra="ASC number"> -->
+    <!--     <div class="templates"></div> -->
+    <!--   </div> -->
+    <!-- </div> -->
+    <div class="section inproceedings">
+      <h4 class="py-3">Conference, peer reviewed</h4>
+      <div class="sort year" extra="DESC number">
+        <div class="templates"></div>
+      </div>
+    </div>
+    <div class="section patent">
+      <h4 class="py-3">Patents</h4>
+      <div class="sort year" extra="DESC number">
+        <div class="templates"></div>
+      </div>
+    </div>
+    <!-- <div class="section misc|phdthesis|mastersthesis|bachelorsthesis|techreport"> -->
+    <!--   <h4 class="py-3">Other</h4> -->
+    <!--   <div class="sort year" extra="DESC number"> -->
+    <!--     <div class="templates"></div> -->
+    <!--   </div> -->
+    <!-- </div> -->
+  </div>
+</section>
+              <div class="bibtex_display"> </div>
+            <!-- <section id="publications" class="mt-5"> -->
+              <!-- <h3>Current Publications</h3> -->
+              <!-- <h4 class="py-3">Journal, peer reviewed</h4> -->
+              <!-- <div class="sort year" extra="ASC number"> -->
+              <!--   <div class="bibtex_display" keywords="journal" > </div> -->
+              <!-- </div> -->
 
-              <h3>Current Publications</h3>
-              <h4 class="py-3">Journal, peer reviewed</h4>
-              <div class="bibtex_display" keywords="journal" > </div>
-              <h4 class="py-3">Conference, peer reviewed</h4>
-              <div class="bibtex_display" keywords="conference" > </div>
-              <h4 class="py-3">Patent</h4>
-              <div class="bibtex_display" keywords="patent"> </div>
-              <h4 class="py-3">Invited Talk</h4>
-              <div class="bibtex_display" keywords="invitedtalk" > </div>
-            </section>
+              <!-- <h4 class="py-3">Conference, peer reviewed</h4> -->
+              <!-- <div class="bibtex_display" keywords="conference" > </div> -->
+              <!-- <h4 class="py-3">Patent</h4> -->
+              <!-- <div class="bibtex_display" keywords="patent"> </div> -->
+              <!-- <h4 class="py-3">Invited Talk</h4> -->
+              <!-- <div class="bibtex_display" keywords="invitedtalk" > </div> -->
 
-            <section id="teaching" class="mt-5">
-              <h3>Teaching</h3>
-              <div class="bibtex_display" keywords="teaching" > </div>
-            </section>
+            <!-- </section> -->
 
             <section id="contact" class="mt-5">
               <h3>Contact Me</h3>
