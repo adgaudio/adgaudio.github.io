@@ -1,0 +1,81 @@
+For any new paper, don't forget to add these extra BIBTEX entries:
+    keywords = "journal",
+    author+an = {1=first,highlight,corresponding; 2=first},
+    url = {}  # publisher url
+    arxiv = {},  # arxiv url
+    sourcecode = {}
+    patenturl = {}
+
+                  <span class="if url" style="margin-left: 20px"> <a class="url" style="color:black; font-size:10px">(publisher)</a> </span>
+                  <span class="if arxiv" style="margin-left: 20px"> <a class="arxiv" style="color:black; font-size:10px">(arxiv)</a> </span>
+                  <span class="if sourcecode" style="margin-left: 20px"> <a class="sourcecode" style="color:black; font-size:10px">(code)</a> </span>
+                  <span class="if patenturl" style="margin-left: 20px"> <a class="patenturl" style="color:black; font-size:10px">(see patent)</a> </span>
+                  <span class="if semester"><span class="semester"></span>, <span class="coursename"></span>, <span class="role"></span></span>
+
+
+
+% TODO:
+% Acoustical Society of America - special session  invited talk
+% Acoustical Society of America - raisa paper
+% NIH K99 award
+
+% ~ (published) s2 separation journal paper ieee access  (TODO: add volume number)
+% - (accepted) add volume,doi,etc for 2025 ieee sensors: the octopus tentacle
+% - add the patent for tentacle when it's published
+
+
+PENDING
+% james genscg paper
+
+% 2026 ASA invited presentation: Towards Multi-Sensor Directional Auscultation
+% 2026 ASA abstract: Auscultation Position Classification and Characterization
+% Fall 2026: if it happens:  15-821/18-843: Mobile and Pervasive Computing (IoT) mentor
+
+  Nadia poster INSPiRED conerence
+      @inproceedings{hoekstra2026preliminary,
+        author    = {Hoekstra, Nadia E. and Kapoor, Sunaina and Laubscher, Lise-Mari{\'e} and Sorour, Gill and Van Deventer, Heidi and Jacobs, Carmen and Joubert, Anja and McGregor, Shawna F. and Gaudio, Alex and Gie, Andre and Barach, Paul and King, Carina and {van der Zalm}, Marieke M. and McCollum, Eric D.},
+        title     = {Preliminary Analysis of a Physician Listening Panel Interpreting Digital Lung Sounds to Support AI-Based Childhood Pneumonia Diagnosis},
+        booktitle = {Proceedings of the International Society of Pediatric Respiratory Diseases (INSPiRED 2026)},
+        year      = {2026},
+        month     = {June},
+        note      = {Accepted poster presentation},
+        address   = {Bologna, Italy}
+      }
+
+  holly paper:  Exploring artificial intelligence-enabled digital lung auscultation for informing bubble continuous positive airway pressure treatment in children with severe pneumonia in Malawi
+
+  PH paper:  cover page of the issue
+
+  Noemi's 2025 cinc abstract paper:  Impact of the Input Representation on Pulmonary Hypertension Detection from Heart Sounds through CNNs
+
+  Helena:  Multichannel Stethoscope Array for Pediatric Patients and Sound Source Localization
+  @inproceedings{Hahn2025BSN,
+    author = {Helena Hahn and Alex Gaudio and Sunaina Kapoor and Eric McCollum and
+              Mounya Elhilali and James E. West},
+    title = {Multichannel Stethoscope Array for Pediatric Patients and Sound
+             Source Localization},
+    booktitle = {Proceedings of the IEEE Body Sensor Networks Conference (BSN)},
+    year = {2025},
+    note = {Clinical abstract},
+  }
+
+
+
+% ~ (accepted abstract) pooja paper.
+        Meeting: 2025 TMS Annual Meeting & Exhibition
+        Symposium: 2025 Technical Division Student Poster Contest
+        Organizer(s): TMS Administration;
+        Proceedings Planned? Undecided
+        Abstract Title: Artificial Intelligence Enabled Microstructural Feature Detection
+        Abstract Type: StudentPoster
+        Authors: Hariharan   Saravanan, Pooja Maurya, Alex Gaudio, Asim Smailagic, P. Chris Pistorius,
+
+% ~ (submitted) AP* paper on techrxiv and then updated and submitted to ieee access
+
+
+
+Alex Gaudio in the news:
+  - cmu article
+  - first jhu article
+  - second jhu article (i think dino)
+
